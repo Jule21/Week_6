@@ -1,0 +1,136 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 20%
+}
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.main {
+    display: grid;
+    grid-template-areas: 
+    "content aside";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 
+}
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas: 
+    "main_content"
+    "additional";
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr  1fr;
+    gap: 40px;
+    background-color: peachpuff;
+}
+.main_content{
+    grid-area: main_content;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.additional {
+    grid-area: additional;
+    display: grid;
+    grid-template-areas: 
+    "more1_2"
+    "more_3";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr  1fr;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left:20px;
+    margin-right: 20px;
+    gap: 40px;
+}
+.more1_2 {
+    grid-area:more1_2;
+    display: flex;
+    justify-content: space-between;
+
+}
+.more_1 {
+
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+}
+.more_2 {
+
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+}
+.more_3 {
+    grid-area: more_3;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: lightgreen;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas: "sectionf1 sectionf2 sectionf3 sectionf4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+    background-color: gray;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.sectionf{
+
+    height: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionf1{
+    grid-area:sectionf1;
+    margin-left: 20px;
+}
+.sectionf2{
+    grid-area:sectionf2;
+}
+.sectionf3{
+    grid-area:sectionf3;
+}
+.sectionf4{
+    grid-area:sectionf4;
+    margin-right: 20px;
+}
